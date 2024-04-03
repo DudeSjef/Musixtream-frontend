@@ -1,8 +1,8 @@
 import './App.css';
 import React, { useEffect, useState } from "react";
-import TestAPI from "./apis/TestAPI";
+import TestAPI from "./apis/TestAPI.js";
 
-function App() {
+export default function App() {
   const [testData, setTestData] = useState("");
 
   useEffect(() => {
@@ -24,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
