@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: musixtream-frontend
+  namespace: musixtream
+  labels:
+    app: musixtream
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: musixtream
+  template:
+    metadata:
+      name: musixtream-frontend
+      labels:
+        app: musixtream
+    spec:
+      containers:
+        - name: musixtream-frontend
+          image: dudesjef/musixtream-frontend
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: 200Mi
+              cpu: "0.5"
+      restartPolicy: Always
+      automountServiceAccountToken: false
