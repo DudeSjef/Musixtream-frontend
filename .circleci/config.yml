@@ -77,7 +77,7 @@ workflows:
             - Musixtream
           requires:
             - test
-      -aks-deploy:
+      - aks-deploy:
           context:
             - Musixtream
           cluster-name: $CLUSTER_NAME
