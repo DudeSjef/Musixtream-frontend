@@ -6,6 +6,7 @@ export default function App() {
   const [testData, setTestData] = useState("");
 
   useEffect(() => {
+    TestAPI.log();
     TestAPI.test().then(data => setTestData(data));
   }, []);
 
