@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = `http://${process.env.REACT_APP_MUSIXTREAM_BACKEND_SERVICE}/`;
+const BASE_URL = `http://${process.env.REACT_APP_MUSIXTREAM_BACKEND_SERVICE}:80/`;
 
 const TestAPI = {
     test: () => axios.get(BASE_URL)
