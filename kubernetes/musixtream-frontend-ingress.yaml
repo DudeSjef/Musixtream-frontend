@@ -10,7 +10,7 @@ spec:
         paths:
           - path: /
             pathType: Prefix
-            frontend:
+            backend:
               service:
                 name: musixtream-frontend-service
                 port:
